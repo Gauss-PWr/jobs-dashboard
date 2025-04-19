@@ -24,7 +24,7 @@ def scrape_full_offers(input_path, output_dir):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     old_files = set(os.listdir(output_dir))
-    for iter_url in tqdm(offers_urls):
+    for iter_url in tqdm(offers_urls): # pasek postępu
         file_name = f"{output_dir}/{iter_url.split('/')[-1]}.html"
         if file_name not in old_files:
             file = open(file_name, "w", encoding="utf-8")

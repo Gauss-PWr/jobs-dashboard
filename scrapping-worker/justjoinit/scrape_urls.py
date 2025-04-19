@@ -4,7 +4,7 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 import sys
 import time
 
-def scrape_offers_urls(url, output_dir):
+def scrape_offers_urls(url, output_file):
     print("Pobieranie listy ofert...")
 
     options = FirefoxOptions()
@@ -34,7 +34,7 @@ def scrape_offers_urls(url, output_dir):
         if driver.execute_script("return document.body.scrollHeight") < expected_height:
             break
 
-    open("offers_urls.txt", "w").write("\n".join(offers_urls))
+    open(output_file, "w").write("\n".join(offers_urls))
 
     driver.close()
 
