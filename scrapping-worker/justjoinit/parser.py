@@ -29,7 +29,7 @@ def parse_offers(input_dir, output_file):
                 skill.getElementsByXPath("//div[1]/h4[1]")[0].textContent: skill.getElementsByXPath("//div[1]/span[1]")[0].textContent
                 for skill in parser.getElementsByXPath("//html/div/div[1]/ul[1]/div")
             },
-            "salary": salary,
+            "Salary": salary,
         }
 
         offers_list.append(offer)
