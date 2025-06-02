@@ -26,7 +26,7 @@ def scrape_offers_urls(url, output_file):
         expected_height += 1000
 
         # dodajemy do offers
-        link_elements = driver.find_elements(By.XPATH, "//div[@data-test-id='virtuoso-item-list']/div/div/a")
+        link_elements = driver.find_elements(By.XPATH, "//div[@data-test-id='virtuoso-item-list']/div/div/div/a")
         for link_element in link_elements:
             offers_urls.add(link_element.get_attribute("href"))
 
